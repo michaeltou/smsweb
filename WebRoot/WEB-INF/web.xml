@@ -25,6 +25,11 @@
     <servlet-name>TestMessageServlet</servlet-name>
     <servlet-class>yunmo.sms.service.TestMessageServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>DownloadAPIDocServlet</servlet-name>
+    <servlet-class>yunmo.sms.service.DownloadAPIDocServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -54,6 +59,10 @@
   <servlet-mapping>
     <servlet-name>TestMessageServlet</servlet-name>
     <url-pattern>/servlet/TestMessageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadAPIDocServlet</servlet-name>
+    <url-pattern>/servlet/DownloadAPIDocServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
