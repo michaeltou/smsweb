@@ -27,7 +27,7 @@ public class RegisterServlet extends HttpServlet {
 		User user = userDao.getUserByName(userName);
 
 		if (user == null) {
-			user = new User(-1, userName, companyName, password, telNo, new Date());
+			user = new User(-1, userName, companyName, password, telNo, new Date(),"1");
 			userDao.Save(user);
 			response.sendRedirect("/sms/index.html");
 		}

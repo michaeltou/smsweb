@@ -12,7 +12,9 @@ public class Utils {
 
 	public static SqlSessionFactory getFactory(){
 		
-		InputStream inputStream = RegisterServlet.class.getClassLoader().getResourceAsStream("/config.xml");
+		InputStream inputStream = RegisterServlet.class.getClassLoader().getResourceAsStream("config.xml");
+		//InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("/config.xml");
+		//InputStream inputStream = ClassLoader.getSystemResourceAsStream("/config.xml");
 		SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
 		return factory;
 	}

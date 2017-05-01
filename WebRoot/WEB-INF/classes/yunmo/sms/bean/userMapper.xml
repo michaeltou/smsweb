@@ -4,7 +4,7 @@
  <mapper namespace="yunmo.sms.bean.userMapper">
  
  	<insert id="adduser" parameterType="User">
- 		insert into user(userName,companyName,password,telNo,registerDate) values(#{userName},#{companyName},#{password},#{telNo},#{registerDate})
+ 		insert into user(userName,password,companyName,telNo,registerDate,status) values(#{userName},#{password},#{companyName},#{telNo},#{registerDate},#{status})
  	</insert>
  	
  	<select id="getUser" parameterType="int" resultType="User">

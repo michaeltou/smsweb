@@ -15,6 +15,16 @@ public class User {
 	private String telNo;
 	
 	private Date registerDate;
+	
+	private String status;
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	public Integer getId() {
 		return id;
@@ -71,8 +81,10 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+
 	public User(Integer id, String userName, String companyName,
-			String password, String telNo, Date registerDate) {
+			String password, String telNo, Date registerDate, String status) {
 		super();
 		this.id = id;
 		this.userName = userName;
@@ -80,14 +92,17 @@ public class User {
 		this.password = password;
 		this.telNo = telNo;
 		this.registerDate = registerDate;
+		this.status = status;
 	}
 
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", userName=" + userName + ", companyName="
 				+ companyName + ", password=" + password + ", telNo=" + telNo
-				+ ", registerDate=" + registerDate + "]";
+				+ ", registerDate=" + registerDate + ", status=" + status + "]";
 	}
+
+	
 	
 	
 	

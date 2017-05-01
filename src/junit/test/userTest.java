@@ -21,7 +21,7 @@ public class userTest {
 		SqlSession session = factory.openSession();
 		
 		String statement = "yunmo.sms.bean.userMapper.adduser";
-		User user = new User(-1, "jack", "yunmo","123456","18717947096",new Date());
+		User user = new User(-1, "jack", "yunmo","123456","18717947096",new Date(),"1");
 		Integer insert = session.insert(statement,user);
 		session.commit();
 		System.out.println(insert);
@@ -54,7 +54,7 @@ public class userTest {
 	public void DaoAdd(){
 		
 		UserDao dao = new UserDao();
-		User user = new User(-1, "jack3", "yunmo","123456","18717947096",new Date());
+		User user = new User(-1, "jack3", "yunmo","123456","18717947096",new Date(),"1");
 		dao.Save(user);
 	}
 }
