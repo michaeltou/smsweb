@@ -761,16 +761,16 @@ html[xmlns] .clearfix {
 /* footer star */
 .footer {
 	width: 100%;
-	background-color: #262729;
-	color: #8B8C8D;
+	background-color: #0D8FCF;
+	color: #ccc;
 	font-family: "microsoft yahei"
 }
 .footer a {
-	color: #8B8C8D;
+	color: #ccc;
 	font-family: "microsoft yahei"
 }
 .footer a:hover {
-	color: #ddd;
+	color: blank;
 }
 .footer-item {
 	width: 100%;
@@ -808,11 +808,13 @@ html[xmlns] .clearfix {
 	width: 57px;
 }
 .footer-nav {
+	margin-left:-80px;
 	float: left;
 }
 .footer-nav dl {
 	float: left;
 	margin-left: 80px;
+	padding:0 20px 0 0;
 }
 .footer-nav dd {
 	padding-top: 10px;
