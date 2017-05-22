@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/temp1.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<title>云模·云短信-专业的短信服务平台,短信平台丨短信营销丨短信群发丨短信接口丨短信验证码,首选云模!</title>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="keywords" content="短信平台,短信营销,北京短信平台,短信群发,群发短信,短信api,云模短信,云模,云短信">
+<meta name="description" content="云模·云短信是中国领先的短信服务平台,专业提供短信群发,短信接口,短信营销,短信验证码,语音验证码等服务,为北京,上海,广东,安徽,山西,江苏,福建等全国各地提供最优质的短信服务,云模短信平台-中国驰名品牌!">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+</head>
+
+<body class="wrapper">
+<iframe style="display: none;"></iframe>
+<div class="header">
+  <div class="header-tit">
+    <div class="container">  <span class="fr">免费咨询热线：0571-86571967</span> </div>
+  </div>
+  <div class="container"> <a id="logo" href="index.html" class="logo"><img src="image/logo.png" alt="云模信息"></a>
+    <ul class="nav">
+      <li class=""><a href="index.html">首页</a></li>
+      <li class=""><a href="product01.html">产品中心</a>
+        <div class="nav-content">
+          <ol>
+            <li class=""><a href="product01.html">国内短信</a></li>
+            <li><a href="product04.html">语音验证码</a></li>
+            <li><a href="product05.html">语音通知</a></li>
+            <li><a href="product06.html">国际短信</a></li>
+          </ol>
+        </div>
+      </li>
+      <!--
+      <li class=""><a href="http://www.yunmosms.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=3">新闻中心</a>
+        <div class="nav-content">
+          <ol>
+            <li class=""><a href="http://www.yunmosms.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=15">签约动态</a></li>
+            <li><a href="http://www.yunmosms.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=16">公司新闻</a></li>
+            <li><a href="http://www.yunmosms.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=17">行业资讯</a></li>
+          </ol>
+          <p class="img"><img src="image/20160113095141120.jpg"></p>
+        </div>
+      </li>
+      -->
+      <li class=""><a href="API.html">API接口</a>
+        <div class="nav-content">
+          <ol>
+            <li> <a href="API.html">API接口资料</a> </li>
+          </ol>
+        </div>
+      </li>
+      <li><a href="HelpCenter01.html">帮助中心</a>
+        <div class="nav-content">
+          <ol>
+            <li><a href="HelpCenter01.html">快速开始</a></li>
+            <li><a href="HelpCenter02.html">使用指南</a></li>
+            <li><a href="HelpCenter03.html">常见问题</a></li>
+            <li><a href="HelpCenter04.html">通道性能</a></li>
+            <li><a href="HelpCenter05.html">用户协议</a></li>
+            <li><a href="HelpCenter06.html">汇款中心</a></li>
+            <li><a href="HelpCenter07.html">在线测试</a></li>
+            <li><a href="HelpCenter08.html">服务资费</a></li>
+          </ol>
+        </div>
+      </li>
+      <li class=""><a href="AboutUs.html">关于我们</a></li>
+    </ul>
+    <div class="login-tip"> <a href="register.html">注册</a><a target="_blank" href="login.html">登陆</a></div>
+  </div>
+</div>
+<!--main--><!-- InstanceBeginEditable name="EditRegion1" -->
+<style>
+.Validform_checktip{
+	margin-left:8px;
+	
+	color:#999;
+	
+}
+.Validform_right{
+	color:#71b83d;
+	padding-left:20px;
+	background:url(../images/right.png) no-repeat left center;
+}
+.Validform_wrong{
+	color:red;
+	padding-left:20px;
+	white-space:nowrap;
+	background:url(../images/error.png) no-repeat left center;
+}
+.Validform_loading{
+	padding-left:20px;
+	background:url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+	border:1px solid red;
+}
+
+
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}
+body .zcxy{padding:10px;}
+</style>
+<div class="trForm">
+  <div class="container clearfix">
+    <div class="item2">
+      <div class="title">用户注册提示</div>
+      <div class="txt">请如实填报您的企业或个人信息，以及账号日常联系人的真实信息，以便我们的客服尽快为您开通云模·云短信试用账号！</div>
+      <div class="content">
+        <form action="/sms/servlet/RegisterServlet" method="post" class="form-horizontal regform" id="regform">
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label" style="padding:0; margin:0;">用户名称</label>
+            <div class="col-sm-10">
+              <input class="form-control" name="userName" datatype="s4-10" nullmsg="请输入用户名！" placeholder="用户名称" type="text" ajaxurl="/sms/servlet/CheckUserExistServlet"   id="userName">
+              <div class="Validform_checktip"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label" style="padding:0; margin:0;">企业名称</label>
+            <div class="col-sm-10">
+              <input class="form-control" name="companyName" placeholder="企业名称" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label" style="padding:0; margin:0;">用户密码</label>
+            <div class="col-sm-10">
+              <input name="password" class="form-control" datatype="s6-10" nullmsg="请输入密码！" placeholder="用户密码" type="password">
+              <div class="Validform_checktip"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label" style="padding:0; margin:0;">确认密码</label>
+            <div class="col-sm-10">
+              <input name="password2" class="form-control" datatype="s6-10" nullmsg="请输入确认密码！" placeholder="确认密码" type="password" recheck="password">
+              <div class="Validform_checktip"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label" style="padding:0; margin:0;">手机号码</label>
+            <div class="col-sm-10">
+              <input class="form-control" datatype="m" name="telNo" nullmsg="请输入手机号码！" placeholder="手机号码" type="text">
+              <div class="Validform_checktip"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label" style="padding:0; margin:0;">验证码</label>
+            <div class="col-sm-5">
+              <input class="form-control" datatype="s4-4" name="code" nullmsg="请输入验证码！" placeholder="验证码" type="text" ajaxurl="/sms/servlet/CheckValidCodeServlet">
+              <div class="Validform_checktip"></div>
+            </div>
+            <div class="col-sm-5"> <img id="code_img" src="/sms/servlet/CheckCodeServlet" onclick="changeImage(this)" style="cursor: pointer;" height="30px" width="90px"> </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-danger btn-lg" style="width:48%;"> 立即注册 </button>
+              <button style="width:48%;margin-left:10px;" type="button" class="btn btn-primary btn-lg" onclick="window.open('http://wpa.qq.com/msgrd?v=3&amp;uin=97620645&amp;site=qq&amp;menu=yes')"> 联系客服 </button>
+            </div>
+          </div>
+          <div class="form-group text-right"> <a href="javascript:void(0);" onclick="xy();">点击“立即注册”，即表示您已经同意遵守《云模·云短信用户注册协议》</a> </div>
+        </form>
+      </div>
+    </div>
+    <!--  
+    <div class="trForm-rig">如果您已拥有云模·云短信账号！<br>
+      <a href="login.html" target="_blank">点击登录</a>
+    </div>-->
+  </div>
+</div>
+<script>
+    $(".regform").Validform({
+    	 ajaxPost:true,
+        tiptype:function(msg,o,cssctl){
+
+            if(!o.obj.is("form")){
+               var objtip=o.obj.siblings(".Validform_checktip");
+				cssctl(objtip,o.type);
+				if(msg =="userExist"){
+					objtip.text("用户名已存在");
+				}else if(msg =="codeNotExist"){
+					objtip.text("验证码不一致");
+				}else{
+					objtip.text(msg);
+				}
+            }
+        },
+       
+        callback:function(data){
+        		alert("注册成功，点击确定按钮后即将跳转到登陆页面。");
+    			//layer.msg('注册成功，即将跳转登陆页面。', {icon: 1});
+                    setTimeout(function(){
+                        window.location="login.html";
+                    }, 1000);
+    		},
+    });
+
+    function changeImage(img){
+    	img.src = img.src+"?"+new Date().getTime();
+    }
+    
+	function xy(){
+	layer.open({
+	  type: 1,
+	  title:'注册协议',
+	 skin: 'layui-layer-rim', //加上边框
+	area: ['420px', ''], //宽高
+	  content: '<div style="padding:15px;">1、煽动抗拒、破坏宪法和法律、行政法规实施的；<br/> 2、煽动颠覆国家政权，推翻社会主义制度的；<br/> 3、煽动分裂国家、破坏国家统一的；<br/> 4、煽动民族仇恨、民族歧视，破坏民族团结的；<br/> 5、捏造或者歪曲事实，散布谣言，扰乱社会秩序的； <br/>6、宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；<br/> 7、公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；<br/> 8、损害国家机关信誉的； 　<br/>9、其他违反宪法和法律行政法规的； <br/>10、进行商业广告行为的。 </div>'
+	});
+	}
+</script> 
+<!-- InstanceEndEditable -->
+<div class="footer">
+  <div class="container">
+    <div class="footer-item clearfix">
+      <div class="footer-nav" style="450px">
+        <dl>
+          <dt class="title"><a href="product01.html">产品中心</a></dt>
+          <dd> <a href="product01.html">国内短信</a> <a href="product04.html">语音验证码</a> <a href="product05.html">语音通知</a> <a href="product06.html">国际短信</a> </dd>
+        </dl>
+        <!--
+        <dl>
+          <dt class="title"><a href="http://www.yunmosms.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=3">新闻中心</a></dt>
+          <dd> <a href="http://www.yunmosms.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=15">签约动态</a> <a href="http://www.yunmosms.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=16">公司新闻</a> <a href="http://www.yunmosms.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=17">行业资讯</a> </dd>
+        </dl>
+        -->
+        <dl>
+          <dt class="title"><a href="API.html">API接口</a></dt>
+          <dd> <a href="API.html">API接口资料</a> </dd>
+        </dl>
+        <dl>
+          <dt class="title"><a href="HelpCenter01.html">帮助中心</a></dt>
+          <dd> <a href="HelpCenter01.html">快速开始</a> <a href="HelpCenter02.html">使用指南</a> <a href="HelpCenter03.html">常见问题</a> <a href="HelpCenter04.html">通道性能</a> <a href="HelpCenter05.html">用户协议</a> <a href="HelpCenter07.html" target="_blank">在线测试</a>  <a href="HelpCenter08.html">服务资费</a></dd>
+        </dl>
+        <!--
+        <ul class="ewm">
+          <li><img style="width:100px;" src="image/ewm.jpg"></li>
+          <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=97620645&amp;site=qq&amp;menu=yes"><i class="img icon-qq"></i><span>QQ</span></a></li>
+        </ul>
+        -->
+      </div>
+      <!--
+      <div class="footer-duanxin">
+        <div class="tit">云模云服务-专业短信服务平台</div>
+        <div class="cont">
+          <form class="regforms" action="/api.php?op=code_index&amp;m=admin&amp;c=index&amp;a=code_index" method="post">
+            <input class="input" name="name" style="margin-bottom: 0px;" title="" placeholder="用户名" type="text">
+            <input class="input" datatype="m" name="mobile" nullmsg="请输入手机号！" style="margin-bottom: 0px;" title="输入手机号码(密码以短信的形式发送)" placeholder="输入手机号码(密码以短信的形式发送)" type="text">
+            <input style="width:100px;margin-left:0px;margin-right:10px;" class="input" datatype="s4-4" name="code" nullmsg="请输入验证码！" placeholder="验证码" type="text">
+            <img style="margin-top:20px;" id="code_imgss" onclick="document.getElementById('code_imgss').src='/api.php?op=checkcode&amp;m=admin&amp;c=index&amp;a=checkcode&amp;time='+Math.random();void(0);" src="image/api.png">
+            <input class="ban_but" value="" type="submit">
+          </form>
+        </div>
+      </div>
+      -->
+      <div class="footer-contact">
+        <div class="title"><a href="javascript:void(0);">联系我们</a></div>
+        <div class="content">
+          销售中心：中国 · 杭州市滨江区秋溢路西可软件园<br>
+          售前热线：0571-86571967<br>
+          投诉电话：0571-86571967<br>
+          企业邮箱：jianqiaowang@deepidata.com<br>
+          公司官网：<a href="index.html" target="_blank">www.yunmo.com</a>&nbsp;<br>
+          产品网站：<a href="index.html">www.yunmosms.com</a><br>
+        </div>
+      </div>
+    </div>
+    <div class="copyright" style="padding-top:0px;">Copyright © 2016 杭州云模网络技术有限公司 All Rights Reserved.</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>
