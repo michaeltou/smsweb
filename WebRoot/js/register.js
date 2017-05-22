@@ -17,7 +17,7 @@ $(function(){
         },
        
         callback:function(data){
-        		alert("注册成功，点击确定按钮后即将跳转到登录页面。");
+        		alert("注册成功.");
                     setTimeout(function(){
                         window.location="login.html";
                     }, 1000);
