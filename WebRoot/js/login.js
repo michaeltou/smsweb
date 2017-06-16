@@ -30,7 +30,7 @@ $(function(){
     				}else{
     					alert(data.info);
                     		setTimeout(function(){
-                        		window.location="index.html";
+                        		window.location="adminIndex.html";
                     		}, 1000);
     					return true;
     				}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>日账单 - 云模管理后台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="baidu-site-verification" content="elXuCAMAW3">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/admin_bootstrap.css">
+<link rel="stylesheet" href="css/admin_reset.css">
+<link rel="stylesheet" href="css/admin_style.css">
+<link rel="stylesheet" href="css/index_style.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/yp_style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/WdatePicker.js"></script>
+<script type="text/javascript" src="js/adminindex.js"></script>
+</head>
+
+<body style="background-color: #fff;">
+<div class="mainContainer">
+<div class="rightmain clearfix" data-page="Statement">
+  <div class="app-framework-cpt">
+    <div class="statement-manage-cpt">
+      <div class="tab-cpt">
+        <div class="tab-nav-cpt">
+          <div class="tab-nav-btn-cpt selected">
+            <div class="tab-nav-btn-body"> <span class="tab-nav-btn-content"> 日账单 </span> </div>
+          </div>
+        </div>
+        <div class="tab-body-group-cpt">
+          <div class="tab-body-cpt tab-body-show">
+            <div class="daily-trade-cpt">
+              <div class="search-bar">
+                <form class="form-cpt">
+                  <table class="search">
+                    <tbody>
+                      <tr>
+                        <td>起止时间:</td>
+                        <td><!--<calender-input-cpt></calender-input-cpt>-->
+                          
+                          <div class="date-picker">
+                            <input class="text-input-cpt" placeholder=""  value="2017-05-19" type="text" name='date1'>
+                          </div>
+                          -
+                          <div class="date-picker">
+                            <input class="text-input-cpt" placeholder=""  value="2017-05-19" type="text" name='date'>
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td>类型:</td>
+                        <td><select name="">
+                            <option value="0" selected="selected"> 全部 </option>
+                            <option value="1"> 充值 </option>
+                            <option value="2"> 消费 </option>
+                            <option value="3"> 其他 </option>
+                          </select></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                        	<input class="button button-middle"  type="button" value="查询" name="search">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+                <div class="block-title-cpt"> 日账单 </div>
+                <div class="recordList">
+                  <div class="totalResult">
+                    
+                  <table class="yunmo">
+                    <thead>
+                      <tr>
+                        <th style="min-width:110px;">日期</th>
+                        <th style="min-width:80px;">类型</th>
+                        <th style="min-width:80px;">业务
+                          <div class="tooltip-cpt right">
+                            <div class="hooks"> <span class="hoverIcon"></span> </div>
+                            <div class="tipContent">
+                              <div> 如果您使用国际短信模板给国内手机号发送短信,<br>
+                                费用会显示在'国内短信'栏目内。因为国内短信价格<br>
+                                低于国际短信价格。 </div>
+                              <span class="tooltipCpt-arrow top"></span> </div>
+                          </div>
+                        </th>
+                        <th class="number" style="min-width:100px;">计费条数(条)</th>
+                        <th class="number" style="min-width:80px;">金额(元)</th>
+                        <th style="min-width:100px;">备注</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2017-05-20</td>
+                        <td>消费</td>
+                        <td>国内短信</td>
+                        <td class="number"><span> -1 </span></td>
+                        <td class="number">-0.05</td>
+                        <td>/</td>
+                      </tr>
+                      <tr>
+                        <td>2017-05-16</td>
+                        <td>其他</td>
+                        <td>/</td>
+                        <td class="number"><span> / </span></td>
+                        <td class="number">+0.5</td>
+                        <td>初始赠送</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="pagination-cpt" pre-page="1" next-page="1"> <span class="totalCount">共2条记录</span> </div>
+                </div>
+                
+                <!--国际计费详情弹框--> 
+                
+                <!--导出操作弹窗--> 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

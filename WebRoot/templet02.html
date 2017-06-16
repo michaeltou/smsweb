@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>签名/模板报备 - 云模管理后台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="baidu-site-verification" content="elXuCAMAW3">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/admin_bootstrap.css">
+<link rel="stylesheet" href="css/admin_reset.css">
+<link rel="stylesheet" href="css/admin_style.css">
+<link rel="stylesheet" href="css/index_style.css">
+<link rel="stylesheet" href="css/yp_style.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/templet.js"></script>
+
+</head>
+
+<body style="background-color: #fff;">
+<div class="mainContainer">
+<div class="rightmain clearfix tplSettingDome signSetting" data-page="domesticRegister">
+  <div class="app-framework-cpt">
+    <div class="domestic-register-manager-cpt">
+      <div class="tab-cpt">
+        <div class="tab-nav-cpt">
+          <div class="tab-nav-btn-cpt selected">
+            <div class="tab-nav-btn-body"><a href="templet02.html"> <span class="tab-nav-btn-content"> 模板管理 </span> </a></div>
+          </div>
+        </div>
+        <div class="tab-body-group-cpt">
+          <div class="tab-body-cpt tab-body-show">
+            <div class="tpl-setting-cpt">
+              <div class="add-new-tpl-cpt" subaccountidx="1">
+                <input type="button" name="newtemplet" value="新增模板" id="newtemplet">
+                <div class="addNewtplPopDiv"> </div>
+                <form class="reg" title="新增模板" action="sms/servlet/AddTempletServlet">
+                     <p>
+                        <label for='signature'>短信签名:</label>
+                        <select name="signature" class='text'>
+                        	<option value="0">1111</option>
+                            <option value="1">222</option>
+                            <option value="2">333</option>
+                        </select><span id="smssignaturetitle">*请先创建<a href="templet01.html">短信签名</a></span>	
+                    </p>
+                     <div style="float:left;padding-right:10px;"><label id="smstypetitle">短信类型:</label></div>
+                        <div style="float:left;padding-right:10px;" id="checkbox1"><input  type="radio" name="smstype" value="验证码" id ="radio1">验证码</div>
+                        <div style="float:left;padding-right:10px;" id="checkbox2"><input  type="radio" name="smstype" value="通知" id ="radio2">通知</div>
+                        <div style="float:left;padding-right:10px;" id="checkbox3"><input  type="radio" name="smstype" value="营销" id ="radio3">营销</div></br>
+                     <p>
+                        <label for='commonused'>常用模板:</label>
+                        <select name="commonused" class='text'>
+                        	<option value=""></option>
+                        	<option value="您的验证码是#code#">您的验证码是#code#</option>
+                            <option value="您的验证码是#code#。如非本人操作，请忽略本短信">您的验证码是#code#。如非本人操作，请忽略本短信</option>
+                            <option value="亲爱的#name#，您的验证码是#code#。有效期为#hour#，请尽快验证">亲爱的#name#，您的验证码是#code#。有效期为#hour#，请尽快验证</option>
+                            <option value="感谢您注册#app#，您的验证码是#code#">感谢您注册#app#，您的验证码是#code#"</option>
+                            <option value="欢迎使用#app#，您的手机验证码是#code#。本条信息无需回复">欢迎使用#app#，您的手机验证码是#code#。本条信息无需回复</option>
+                            <option value="正在进行登录操作，您的验证码是#code#">正在进行登录操作，您的验证码是#code#</option>
+                            <option value="验证码是#code#。如非本人操作，请致电#tel#">验证码是#code#。如非本人操作，请致电#tel#</option>
+                            <option value="#code#(#app#手机验证码，请完成验证)，如非本人操作，请忽略本短信">#code#(#app#手机验证码，请完成验证)，如非本人操作，请忽略本短信</option>
+                        </select>
+                    </p>
+                   <label id='smscontenttitle'>短信内容:</label>
+                        <textarea rows="10" cols="30"  name='smscontent' class='text' id = "smscontent" ></textarea></br>
+                        <span name='smscontenttip' id ="smscontenttip">*每条短信最多可发67个字，超过67个字则按多条短信收费</span>
+                    
+                </form>
+              </div>
+              <div class="tpl-list-cpt">
+                <div class="block-title-cpt"> 模板列表 </div>
+                <div class="searchbar">
+                  <div class="searchTplId"> <span class="searchbar-title">模板ID:</span>
+                    <div class="input-cpt-wrapper" _v-c09d7846="" style="display: inline-block; width: 300px;">
+                      <input class="input-cpt" _v-c09d7846="" placeholder="请输入模板id" name="tplid" type="text">
+                    </div>
+                    <span class="searchbar-title" style="margin-left: 10px;">关键字:</span>
+                    <div class="input-cpt-wrapper" _v-c09d7846="" style="display: inline-block; width: 300px;">
+                      <input class="input-cpt" _v-c09d7846="" placeholder="请输入模板内容关键字" name="keyword" type="text">
+                    </div>
+                    <button style="margin-left: 10px;" class="button button-middle   " type="button"> <span class="button-copy"> 查询 </span> </button>
+                  </div>
+                </div>
+                <div class="recordList">
+                  <table class="yunmo">
+                    <thead>
+                      <tr>
+                        <th style="width:155px;">申请时间</th>
+                        <th style="width:105px;">模板code</th>
+                        <th style="min-width:100px;width:755px">模板内容</th>
+                        <th style="width:130px;">审核状态</th>
+                        <th style="min-width:100px;">未通过原因</th>
+                        <th style="width: 100px;">操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        <td>2017-06-02 12:10</td>
+                        <td >12345678</td>
+                        <td >【云模】您购买的#order#订单已成功消费，祝您生活愉快！</td>
+                        <td >审核中</td>
+                        <td >/</td>
+                        <td ><input type='button' name='delete' value='删除'></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="pagination-cpt" pre-page="1" next-page="1"> <span class="totalCount">共0条记录</span> </div>
+                  <div class="addNewtplPopDiv"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

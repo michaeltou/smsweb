@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>数据统计 - 云模管理后台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="baidu-site-verification" content="elXuCAMAW3">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/admin_bootstrap.css">
+<link rel="stylesheet" href="css/admin_reset.css">
+<link rel="stylesheet" href="css/admin_style.css">
+<link rel="stylesheet" href="css/index_style.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/yp_style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/WdatePicker.js"></script>
+<script type="text/javascript" src="js/adminindex.js"></script>
+</head>
+
+<body style="background-color: #fff;">
+<div class="mainContainer">
+<div data-page="StatisticCpt" class="rightmain clearfix">
+  <div class="app-framework-cpt">
+    <div class="tab-cpt">
+      <div class="tab-nav-cpt">
+        <div class="tab-nav-btn-cpt ">
+            <div class="tab-nav-btn-body"><a href="statisticsend.html"> <span class="tab-nav-btn-content"> 短信发送量 </span> </a></div>
+          </div>
+          <div class="tab-nav-btn-cpt selected">
+            <div class="tab-nav-btn-body"><a href="statisticarrive.html"> <span class="tab-nav-btn-content"> 短信到达率 </span></a> </div>
+          </div>
+          <div class="tab-nav-btn-cpt ">
+            <div class="tab-nav-btn-body"><a href="statisticfail.html"> <span class="tab-nav-btn-content"> 短信失败原因 </span></a> </div>
+          </div>
+          <div class="tab-nav-btn-cpt">
+            <div class="tab-nav-btn-body"> <a href="statisticdelay.html"> <span class="tab-nav-btn-content"> 短信耗时 </span> </a></div>
+          </div>
+      </div>
+      <div class="tab-body-group-cpt statisticCpt">
+        <div class="tab-body-cpt "> </div>
+        <div class="tab-body-cpt tab-body-show"  style="padding-top:10px;">
+          <div class="arrive-statistic-cpt"> 
+            <!--<state-message-cpt--> 
+            <!--theme="stateMsgTheme"--> 
+            <!--&gt;此报表用于统计短信发送失败的原因归类--> 
+            <!--</state-message-cpt>-->
+            <div class="time-select">
+              <ul class="searchLi searchLi-no1 clearfix">
+                <li class="li-title">统计类型:</li>
+                <li>
+                  <form class="form-cpt" style="display: inline-block; line-height: 30px;">
+                    <input  name="statistictype" type="radio" style="margin-right:10px;" id="statistictype">
+                    实时统计(今日)
+                    <input  name="statistictype" type="radio"  checked="checked" style="margin-left:20px;margin-right:10px;">
+                    历史统计 
+                  </form>
+                </li>
+              </ul>
+              <ul class="searchLi clearfix" id ="timecondition">
+                  <li class="li-title">起始时间:</li>
+                  <li>
+                    <div class="date-picker">
+                     	 <input class="text-input-cpt" placeholder=""  value="2017-05-19" type="text" name='date1'>
+                    </div>
+                    -
+                    <div class="date-picker">
+						<input class="text-input-cpt" placeholder=""  value="2017-05-19" type="text" name='date'>
+                    </div>
+                  </li>
+                </ul>
+              <ul class="searchLi clearfix">
+              </ul>
+              <div class="searchBtn">
+                <button class="button button-middle   " type="button"> <span class="button-copy"> 查询 </span> </button>
+              </div>
+            </div>
+            <div class="block-title-cpt" style="margin: 20px 0px 10px;"> 短信到达率概览 </div>
+            <!-- 实时图标-->
+            <div class="realtime-receive">
+              <div class="statistic-diagram" style="height: 500px; position: relative; min-height: 250px;" id="RealtimeData" data-highcharts-chart="9">
+                <div class="highcharts-container" id="highcharts-33" style="position: relative; overflow: hidden; width: 1700px; height: 500px; text-align: left; line-height: normal; z-index: 0; left: 0px; top: 0.5px;"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="1700" height="500">
+                  <desc>Created with Highcharts 4.2.6</desc>
+                  <defs>
+                    <clipPath id="highcharts-34">
+                      <rect x="0" y="0" width="1624" height="372"></rect>
+                    </clipPath>
+                  </defs>
+                  <rect x="0" y="0" width="1700" height="500" fill="#FFFFFF" class=" highcharts-background"></rect>
+                  <g class="highcharts-grid"></g>
+                  <g class="highcharts-grid">
+                    <path fill="none" d="M 66 382.5 L 1690 382.5" stroke="#d8d8d8" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 66 308.5 L 1690 308.5" stroke="#d8d8d8" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 66 233.5 L 1690 233.5" stroke="#d8d8d8" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 66 159.5 L 1690 159.5" stroke="#d8d8d8" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 66 84.5 L 1690 84.5" stroke="#d8d8d8" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 66 9.5 L 1690 9.5" stroke="#d8d8d8" stroke-width="1" opacity="1"></path>
+                  </g>
+                  <g class="highcharts-axis">
+                    <path fill="none" d="M 92.5 382 L 92.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 119.5 382 L 119.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 146.5 382 L 146.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 173.5 382 L 173.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 200.5 382 L 200.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 227.5 382 L 227.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 254.5 382 L 254.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 282.5 382 L 282.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 309.5 382 L 309.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 336.5 382 L 336.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 363.5 382 L 363.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 390.5 382 L 390.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 417.5 382 L 417.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 444.5 382 L 444.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 471.5 382 L 471.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 498.5 382 L 498.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 525.5 382 L 525.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 552.5 382 L 552.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 579.5 382 L 579.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 606.5 382 L 606.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 633.5 382 L 633.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 660.5 382 L 660.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 688.5 382 L 688.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 715.5 382 L 715.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 742.5 382 L 742.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 769.5 382 L 769.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 796.5 382 L 796.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 823.5 382 L 823.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 850.5 382 L 850.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 877.5 382 L 877.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 904.5 382 L 904.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 931.5 382 L 931.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 958.5 382 L 958.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 985.5 382 L 985.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1012.5 382 L 1012.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1039.5 382 L 1039.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1066.5 382 L 1066.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1094.5 382 L 1094.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1121.5 382 L 1121.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1148.5 382 L 1148.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1175.5 382 L 1175.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1202.5 382 L 1202.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1229.5 382 L 1229.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1256.5 382 L 1256.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1283.5 382 L 1283.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1310.5 382 L 1310.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1337.5 382 L 1337.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1364.5 382 L 1364.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1391.5 382 L 1391.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1418.5 382 L 1418.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1445.5 382 L 1445.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1472.5 382 L 1472.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1500.5 382 L 1500.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1527.5 382 L 1527.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1554.5 382 L 1554.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1581.5 382 L 1581.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1608.5 382 L 1608.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1635.5 382 L 1635.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1662.5 382 L 1662.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 1690.5 382 L 1690.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 65.5 382 L 65.5 385" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
+                    <path fill="none" d="M 66 382.5 L 1690 382.5" stroke="#d8d8d8" stroke-width="1"></path>
+                  </g>
+                  <g class="highcharts-axis"></g>
+                  <g class="highcharts-series-group">
+                    <g class="highcharts-series highcharts-series-0" transform="translate(66,10) scale(1 1)" clip-path="url(#highcharts-34)">
+                      <path fill="#1eaaf1" d="M 13.533333333333 0 L 40.6 0 L 67.666666666667 0 L 94.733333333333 0 L 121.8 0 L 148.86666666667 0 L 175.93333333333 0 L 203 0 L 230.06666666667 0 L 257.13333333333 0 L 284.2 0 L 311.26666666667 0 L 338.33333333333 0 L 365.4 0 L 392.46666666667 0 L 419.53333333333 0 L 446.6 0 L 473.66666666667 0 L 500.73333333333 0 L 527.8 0 L 554.86666666667 0 L 581.93333333333 0 L 609 0 L 636.06666666667 0 L 663.13333333333 0 L 690.2 0 L 717.26666666667 0 L 744.33333333333 0 L 771.4 0 L 798.46666666667 0 L 825.53333333333 0 L 852.6 0 L 879.66666666667 0 L 906.73333333333 0 L 933.8 0 L 960.86666666667 0 L 987.93333333333 0 L 1015 0 L 1042.0666666667 0 L 1069.1333333333 0 L 1096.2 0 L 1123.2666666667 0 L 1150.3333333333 0 L 1177.4 0 L 1204.4666666667 0 L 1231.5333333333 0 L 1258.6 0 L 1285.6666666667 0 L 1312.7333333333 0 L 1339.8 0 L 1366.8666666667 0 L 1393.9333333333 0 L 1421 0 L 1448.0666666667 0 L 1475.1333333333 0 L 1502.2 0 L 1529.2666666667 0 L 1556.3333333333 0 L 1583.4 0 L 1610.4666666667 0 L 1610.4666666667 372 L 1583.4 372 L 1556.3333333333 372 L 1529.2666666667 372 L 1502.2 372 L 1475.1333333333 372 L 1448.0666666667 372 L 1421 372 L 1393.9333333333 372 L 1366.8666666667 372 L 1339.8 372 L 1312.7333333333 372 L 1285.6666666667 372 L 1258.6 372 L 1231.5333333333 372 L 1204.4666666667 372 L 1177.4 372 L 1150.3333333333 372 L 1123.2666666667 372 L 1096.2 372 L 1069.1333333333 372 L 1042.0666666667 372 L 1015 372 L 987.93333333333 372 L 960.86666666667 372 L 933.8 372 L 906.73333333333 372 L 879.66666666667 372 L 852.6 372 L 825.53333333333 372 L 798.46666666667 372 L 771.4 372 L 744.33333333333 372 L 717.26666666667 372 L 690.2 372 L 663.13333333333 372 L 636.06666666667 372 L 609 372 L 581.93333333333 372 L 554.86666666667 372 L 527.8 372 L 500.73333333333 372 L 473.66666666667 372 L 446.6 372 L 419.53333333333 372 L 392.46666666667 372 L 365.4 372 L 338.33333333333 372 L 311.26666666667 372 L 284.2 372 L 257.13333333333 372 L 230.06666666667 372 L 203 372 L 175.93333333333 372 L 148.86666666667 372 L 121.8 372 L 94.733333333333 372 L 67.666666666667 372 L 40.6 372 L 13.533333333333 372" fill-opacity="0.08"></path>
+                      <path fill="none" d="M 13.533333333333 0 L 40.6 0 L 67.666666666667 0 L 94.733333333333 0 L 121.8 0 L 148.86666666667 0 L 175.93333333333 0 L 203 0 L 230.06666666667 0 L 257.13333333333 0 L 284.2 0 L 311.26666666667 0 L 338.33333333333 0 L 365.4 0 L 392.46666666667 0 L 419.53333333333 0 L 446.6 0 L 473.66666666667 0 L 500.73333333333 0 L 527.8 0 L 554.86666666667 0 L 581.93333333333 0 L 609 0 L 636.06666666667 0 L 663.13333333333 0 L 690.2 0 L 717.26666666667 0 L 744.33333333333 0 L 771.4 0 L 798.46666666667 0 L 825.53333333333 0 L 852.6 0 L 879.66666666667 0 L 906.73333333333 0 L 933.8 0 L 960.86666666667 0 L 987.93333333333 0 L 1015 0 L 1042.0666666667 0 L 1069.1333333333 0 L 1096.2 0 L 1123.2666666667 0 L 1150.3333333333 0 L 1177.4 0 L 1204.4666666667 0 L 1231.5333333333 0 L 1258.6 0 L 1285.6666666667 0 L 1312.7333333333 0 L 1339.8 0 L 1366.8666666667 0 L 1393.9333333333 0 L 1421 0 L 1448.0666666667 0 L 1475.1333333333 0 L 1502.2 0 L 1529.2666666667 0 L 1556.3333333333 0 L 1583.4 0 L 1610.4666666667 0" stroke="#1eaaf1" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                      <path fill="none" d="M 3.5333333333329993 0 L 13.533333333333 0 L 40.6 0 L 67.666666666667 0 L 94.733333333333 0 L 121.8 0 L 148.86666666667 0 L 175.93333333333 0 L 203 0 L 230.06666666667 0 L 257.13333333333 0 L 284.2 0 L 311.26666666667 0 L 338.33333333333 0 L 365.4 0 L 392.46666666667 0 L 419.53333333333 0 L 446.6 0 L 473.66666666667 0 L 500.73333333333 0 L 527.8 0 L 554.86666666667 0 L 581.93333333333 0 L 609 0 L 636.06666666667 0 L 663.13333333333 0 L 690.2 0 L 717.26666666667 0 L 744.33333333333 0 L 771.4 0 L 798.46666666667 0 L 825.53333333333 0 L 852.6 0 L 879.66666666667 0 L 906.73333333333 0 L 933.8 0 L 960.86666666667 0 L 987.93333333333 0 L 1015 0 L 1042.0666666667 0 L 1069.1333333333 0 L 1096.2 0 L 1123.2666666667 0 L 1150.3333333333 0 L 1177.4 0 L 1204.4666666667 0 L 1231.5333333333 0 L 1258.6 0 L 1285.6666666667 0 L 1312.7333333333 0 L 1339.8 0 L 1366.8666666667 0 L 1393.9333333333 0 L 1421 0 L 1448.0666666667 0 L 1475.1333333333 0 L 1502.2 0 L 1529.2666666667 0 L 1556.3333333333 0 L 1583.4 0 L 1610.4666666667 0 L 1620.4666666667 0" stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22" class=" highcharts-tracker" style="cursor:pointer;"></path>
+                    </g>
+                    <g class="highcharts-markers highcharts-series-0 highcharts-tracker" transform="translate(66,10) scale(1 1)" clip-path="url(#highcharts-35)" style="cursor:pointer;">
+                      <path fill="#1eaaf1" d="M 1610 -4 C 1615.328 -4 1615.328 4 1610 4 C 1604.672 4 1604.672 -4 1610 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1583 -4 C 1588.328 -4 1588.328 4 1583 4 C 1577.672 4 1577.672 -4 1583 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1556 -4 C 1561.328 -4 1561.328 4 1556 4 C 1550.672 4 1550.672 -4 1556 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1529 -4 C 1534.328 -4 1534.328 4 1529 4 C 1523.672 4 1523.672 -4 1529 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1502 -4 C 1507.328 -4 1507.328 4 1502 4 C 1496.672 4 1496.672 -4 1502 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1475 -4 C 1480.328 -4 1480.328 4 1475 4 C 1469.672 4 1469.672 -4 1475 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1448 -4 C 1453.328 -4 1453.328 4 1448 4 C 1442.672 4 1442.672 -4 1448 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1421 -4 C 1426.328 -4 1426.328 4 1421 4 C 1415.672 4 1415.672 -4 1421 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1393 -4 C 1398.328 -4 1398.328 4 1393 4 C 1387.672 4 1387.672 -4 1393 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1366 -4 C 1371.328 -4 1371.328 4 1366 4 C 1360.672 4 1360.672 -4 1366 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1339 -4 C 1344.328 -4 1344.328 4 1339 4 C 1333.672 4 1333.672 -4 1339 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1312 -4 C 1317.328 -4 1317.328 4 1312 4 C 1306.672 4 1306.672 -4 1312 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1285 -4 C 1290.328 -4 1290.328 4 1285 4 C 1279.672 4 1279.672 -4 1285 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1258 -4 C 1263.328 -4 1263.328 4 1258 4 C 1252.672 4 1252.672 -4 1258 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1231 -4 C 1236.328 -4 1236.328 4 1231 4 C 1225.672 4 1225.672 -4 1231 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1204 -4 C 1209.328 -4 1209.328 4 1204 4 C 1198.672 4 1198.672 -4 1204 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1177 -4 C 1182.328 -4 1182.328 4 1177 4 C 1171.672 4 1171.672 -4 1177 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1150 -4 C 1155.328 -4 1155.328 4 1150 4 C 1144.672 4 1144.672 -4 1150 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1123 -4 C 1128.328 -4 1128.328 4 1123 4 C 1117.672 4 1117.672 -4 1123 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1096 -4 C 1101.328 -4 1101.328 4 1096 4 C 1090.672 4 1090.672 -4 1096 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1069 -4 C 1074.328 -4 1074.328 4 1069 4 C 1063.672 4 1063.672 -4 1069 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1042 -4 C 1047.328 -4 1047.328 4 1042 4 C 1036.672 4 1036.672 -4 1042 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 1015 -4 C 1020.328 -4 1020.328 4 1015 4 C 1009.672 4 1009.672 -4 1015 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 987 -4 C 992.328 -4 992.328 4 987 4 C 981.672 4 981.672 -4 987 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 960 -4 C 965.328 -4 965.328 4 960 4 C 954.672 4 954.672 -4 960 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 933 -4 C 938.328 -4 938.328 4 933 4 C 927.672 4 927.672 -4 933 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 906 -4 C 911.328 -4 911.328 4 906 4 C 900.672 4 900.672 -4 906 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 879 -4 C 884.328 -4 884.328 4 879 4 C 873.672 4 873.672 -4 879 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 852 -4 C 857.328 -4 857.328 4 852 4 C 846.672 4 846.672 -4 852 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 825 -4 C 830.328 -4 830.328 4 825 4 C 819.672 4 819.672 -4 825 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 798 -4 C 803.328 -4 803.328 4 798 4 C 792.672 4 792.672 -4 798 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 771 -4 C 776.328 -4 776.328 4 771 4 C 765.672 4 765.672 -4 771 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 744 -4 C 749.328 -4 749.328 4 744 4 C 738.672 4 738.672 -4 744 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 717 -4 C 722.328 -4 722.328 4 717 4 C 711.672 4 711.672 -4 717 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 690 -4 C 695.328 -4 695.328 4 690 4 C 684.672 4 684.672 -4 690 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 663 -4 C 668.328 -4 668.328 4 663 4 C 657.672 4 657.672 -4 663 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 636 -4 C 641.328 -4 641.328 4 636 4 C 630.672 4 630.672 -4 636 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 609 -4 C 614.328 -4 614.328 4 609 4 C 603.672 4 603.672 -4 609 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 581 -4 C 586.328 -4 586.328 4 581 4 C 575.672 4 575.672 -4 581 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 554 -4 C 559.328 -4 559.328 4 554 4 C 548.672 4 548.672 -4 554 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 527 -4 C 532.328 -4 532.328 4 527 4 C 521.672 4 521.672 -4 527 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 500 -4 C 505.328 -4 505.328 4 500 4 C 494.672 4 494.672 -4 500 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 473 -4 C 478.328 -4 478.328 4 473 4 C 467.672 4 467.672 -4 473 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 446 -4 C 451.328 -4 451.328 4 446 4 C 440.672 4 440.672 -4 446 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 419 -4 C 424.328 -4 424.328 4 419 4 C 413.672 4 413.672 -4 419 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 392 -4 C 397.328 -4 397.328 4 392 4 C 386.672 4 386.672 -4 392 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 365 -4 C 370.328 -4 370.328 4 365 4 C 359.672 4 359.672 -4 365 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 338 -4 C 343.328 -4 343.328 4 338 4 C 332.672 4 332.672 -4 338 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 311 -4 C 316.328 -4 316.328 4 311 4 C 305.672 4 305.672 -4 311 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 284 -4 C 289.328 -4 289.328 4 284 4 C 278.672 4 278.672 -4 284 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 257 -4 C 262.328 -4 262.328 4 257 4 C 251.672 4 251.672 -4 257 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 230 -4 C 235.328 -4 235.328 4 230 4 C 224.672 4 224.672 -4 230 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 203 -4 C 208.328 -4 208.328 4 203 4 C 197.672 4 197.672 -4 203 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 175 -4 C 180.328 -4 180.328 4 175 4 C 169.672 4 169.672 -4 175 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 148 -4 C 153.328 -4 153.328 4 148 4 C 142.672 4 142.672 -4 148 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 121 -4 C 126.328 -4 126.328 4 121 4 C 115.672 4 115.672 -4 121 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 94 -4 C 99.328 -4 99.328 4 94 4 C 88.672 4 88.672 -4 94 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 67 -4 C 72.328 -4 72.328 4 67 4 C 61.672 4 61.672 -4 67 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 40 -4 C 45.328 -4 45.328 4 40 4 C 34.672 4 34.672 -4 40 -4 Z"></path>
+                      <path fill="#1eaaf1" d="M 13 -4 C 18.328 -4 18.328 4 13 4 C 7.672 4 7.672 -4 13 -4 Z"></path>
+                    </g>
+                  </g>
+                  <g class="highcharts-legend" transform="translate(811,455)">
+                    <g>
+                      <g>
+                        <g class="highcharts-legend-item" transform="translate(8,3)">
+                          <text x="21" style="color:#666666;font-size:14px;font-weight:bold;cursor:pointer;font-family:Microsoft yahei;fill:#666666;" text-anchor="start" y="17">到达率</text>
+                          <rect x="0" y="4" width="16" height="14" fill="#1eaaf1"></rect>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g class="highcharts-axis-labels highcharts-xaxis-labels">
+                    <text x="82.83316497887056" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 82.83316497887056 400)" y="400" opacity="1">
+                      <tspan>00:00:00</tspan>
+                    </text>
+                    <text x="109.89983164553722" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 109.89983164553722 400)" y="400" opacity="1">
+                      <tspan>00:10:00</tspan>
+                    </text>
+                    <text x="136.96649831220387" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 136.96649831220387 400)" y="400" opacity="1">
+                      <tspan>00:20:00</tspan>
+                    </text>
+                    <text x="164.03316497887053" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 164.03316497887053 400)" y="400" opacity="1">
+                      <tspan>00:30:00</tspan>
+                    </text>
+                    <text x="191.09983164553722" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 191.09983164553722 400)" y="400" opacity="1">
+                      <tspan>00:40:00</tspan>
+                    </text>
+                    <text x="218.16649831220388" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 218.16649831220388 400)" y="400" opacity="1">
+                      <tspan>00:50:00</tspan>
+                    </text>
+                    <text x="245.23316497887058" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 245.23316497887058 400)" y="400" opacity="1">
+                      <tspan>01:00:00</tspan>
+                    </text>
+                    <text x="272.29983164553715" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 272.29983164553715 400)" y="400" opacity="1">
+                      <tspan>01:10:00</tspan>
+                    </text>
+                    <text x="299.3664983122039" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 299.3664983122039 400)" y="400" opacity="1">
+                      <tspan>01:20:00</tspan>
+                    </text>
+                    <text x="326.43316497887054" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 326.43316497887054 400)" y="400" opacity="1">
+                      <tspan>01:30:00</tspan>
+                    </text>
+                    <text x="353.4998316455372" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 353.4998316455372 400)" y="400" opacity="1">
+                      <tspan>01:40:00</tspan>
+                    </text>
+                    <text x="380.56649831220386" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 380.56649831220386 400)" y="400" opacity="1">
+                      <tspan>01:50:00</tspan>
+                    </text>
+                    <text x="407.6331649788705" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 407.6331649788705 400)" y="400" opacity="1">
+                      <tspan>02:00:00</tspan>
+                    </text>
+                    <text x="434.6998316455372" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 434.6998316455372 400)" y="400" opacity="1">
+                      <tspan>02:10:00</tspan>
+                    </text>
+                    <text x="461.76649831220385" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 461.76649831220385 400)" y="400" opacity="1">
+                      <tspan>02:20:00</tspan>
+                    </text>
+                    <text x="488.8331649788705" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 488.8331649788705 400)" y="400" opacity="1">
+                      <tspan>02:30:00</tspan>
+                    </text>
+                    <text x="515.8998316455373" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 515.8998316455373 400)" y="400" opacity="1">
+                      <tspan>02:40:00</tspan>
+                    </text>
+                    <text x="542.966498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 542.966498312204 400)" y="400" opacity="1">
+                      <tspan>02:50:00</tspan>
+                    </text>
+                    <text x="570.0331649788706" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 570.0331649788706 400)" y="400" opacity="1">
+                      <tspan>03:00:00</tspan>
+                    </text>
+                    <text x="597.0998316455372" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 597.0998316455372 400)" y="400" opacity="1">
+                      <tspan>03:10:00</tspan>
+                    </text>
+                    <text x="624.1664983122039" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 624.1664983122039 400)" y="400" opacity="1">
+                      <tspan>03:20:00</tspan>
+                    </text>
+                    <text x="651.2331649788705" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 651.2331649788705 400)" y="400" opacity="1">
+                      <tspan>03:30:00</tspan>
+                    </text>
+                    <text x="678.2998316455372" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 678.2998316455372 400)" y="400" opacity="1">
+                      <tspan>03:40:00</tspan>
+                    </text>
+                    <text x="705.3664983122038" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 705.3664983122038 400)" y="400" opacity="1">
+                      <tspan>03:50:00</tspan>
+                    </text>
+                    <text x="732.4331649788705" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 732.4331649788705 400)" y="400" opacity="1">
+                      <tspan>04:00:00</tspan>
+                    </text>
+                    <text x="759.4998316455373" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 759.4998316455373 400)" y="400" opacity="1">
+                      <tspan>04:10:00</tspan>
+                    </text>
+                    <text x="786.5664983122039" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 786.5664983122039 400)" y="400" opacity="1">
+                      <tspan>04:20:00</tspan>
+                    </text>
+                    <text x="813.6331649788706" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 813.6331649788706 400)" y="400" opacity="1">
+                      <tspan>04:30:00</tspan>
+                    </text>
+                    <text x="840.6998316455372" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 840.6998316455372 400)" y="400" opacity="1">
+                      <tspan>04:40:00</tspan>
+                    </text>
+                    <text x="867.7664983122039" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 867.7664983122039 400)" y="400" opacity="1">
+                      <tspan>04:50:00</tspan>
+                    </text>
+                    <text x="894.8331649788705" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 894.8331649788705 400)" y="400" opacity="1">
+                      <tspan>05:00:00</tspan>
+                    </text>
+                    <text x="921.8998316455372" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 921.8998316455372 400)" y="400" opacity="1">
+                      <tspan>05:10:00</tspan>
+                    </text>
+                    <text x="948.9664983122038" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 948.9664983122038 400)" y="400" opacity="1">
+                      <tspan>05:20:00</tspan>
+                    </text>
+                    <text x="976.0331649788706" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 976.0331649788706 400)" y="400" opacity="1">
+                      <tspan>05:30:00</tspan>
+                    </text>
+                    <text x="1003.0998316455372" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1003.0998316455372 400)" y="400" opacity="1">
+                      <tspan>05:40:00</tspan>
+                    </text>
+                    <text x="1030.166498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1030.166498312204 400)" y="400" opacity="1">
+                      <tspan>05:50:00</tspan>
+                    </text>
+                    <text x="1057.2331649788707" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1057.2331649788707 400)" y="400" opacity="1">
+                      <tspan>06:00:00</tspan>
+                    </text>
+                    <text x="1084.2998316455373" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1084.2998316455373 400)" y="400" opacity="1">
+                      <tspan>06:10:00</tspan>
+                    </text>
+                    <text x="1111.366498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1111.366498312204 400)" y="400" opacity="1">
+                      <tspan>06:20:00</tspan>
+                    </text>
+                    <text x="1138.4331649788705" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1138.4331649788705 400)" y="400" opacity="1">
+                      <tspan>06:30:00</tspan>
+                    </text>
+                    <text x="1165.4998316455374" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1165.4998316455374 400)" y="400" opacity="1">
+                      <tspan>06:40:00</tspan>
+                    </text>
+                    <text x="1192.566498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1192.566498312204 400)" y="400" opacity="1">
+                      <tspan>06:50:00</tspan>
+                    </text>
+                    <text x="1219.6331649788706" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1219.6331649788706 400)" y="400" opacity="1">
+                      <tspan>07:00:00</tspan>
+                    </text>
+                    <text x="1246.6998316455374" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1246.6998316455374 400)" y="400" opacity="1">
+                      <tspan>07:10:00</tspan>
+                    </text>
+                    <text x="1273.766498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1273.766498312204 400)" y="400" opacity="1">
+                      <tspan>07:20:00</tspan>
+                    </text>
+                    <text x="1300.8331649788706" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1300.8331649788706 400)" y="400" opacity="1">
+                      <tspan>07:30:00</tspan>
+                    </text>
+                    <text x="1327.8998316455372" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1327.8998316455372 400)" y="400" opacity="1">
+                      <tspan>07:40:00</tspan>
+                    </text>
+                    <text x="1354.966498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1354.966498312204 400)" y="400" opacity="1">
+                      <tspan>07:50:00</tspan>
+                    </text>
+                    <text x="1382.0331649788707" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1382.0331649788707 400)" y="400" opacity="1">
+                      <tspan>08:00:00</tspan>
+                    </text>
+                    <text x="1409.0998316455373" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1409.0998316455373 400)" y="400" opacity="1">
+                      <tspan>08:10:00</tspan>
+                    </text>
+                    <text x="1436.1664983122039" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1436.1664983122039 400)" y="400" opacity="1">
+                      <tspan>08:20:00</tspan>
+                    </text>
+                    <text x="1463.2331649788707" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1463.2331649788707 400)" y="400" opacity="1">
+                      <tspan>08:30:00</tspan>
+                    </text>
+                    <text x="1490.2998316455373" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1490.2998316455373 400)" y="400" opacity="1">
+                      <tspan>08:40:00</tspan>
+                    </text>
+                    <text x="1517.366498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1517.366498312204 400)" y="400" opacity="1">
+                      <tspan>08:50:00</tspan>
+                    </text>
+                    <text x="1544.4331649788705" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1544.4331649788705 400)" y="400" opacity="1">
+                      <tspan>09:00:00</tspan>
+                    </text>
+                    <text x="1571.4998316455374" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1571.4998316455374 400)" y="400" opacity="1">
+                      <tspan>09:10:00</tspan>
+                    </text>
+                    <text x="1598.566498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1598.566498312204 400)" y="400" opacity="1">
+                      <tspan>09:20:00</tspan>
+                    </text>
+                    <text x="1625.6331649788706" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1625.6331649788706 400)" y="400" opacity="1">
+                      <tspan>09:30:00</tspan>
+                    </text>
+                    <text x="1652.6998316455374" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1652.6998316455374 400)" y="400" opacity="1">
+                      <tspan>09:40:00</tspan>
+                    </text>
+                    <text x="1679.766498312204" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:500px;text-overflow:ellipsis;" text-anchor="end" transform="translate(0,0) rotate(-45 1679.766498312204 400)" y="400" opacity="1">
+                      <tspan>09:50:00</tspan>
+                    </text>
+                  </g>
+                  <g class="highcharts-axis-labels highcharts-yaxis-labels">
+                    <text x="51" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:551px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="387" opacity="1">
+                      <tspan>0 %</tspan>
+                    </text>
+                    <text x="51" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:551px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="312" opacity="1">
+                      <tspan>20 %</tspan>
+                    </text>
+                    <text x="51" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:551px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="238" opacity="1">
+                      <tspan>40 %</tspan>
+                    </text>
+                    <text x="51" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:551px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="163" opacity="1">
+                      <tspan>60 %</tspan>
+                    </text>
+                    <text x="51" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:551px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="89" opacity="1">
+                      <tspan>80 %</tspan>
+                    </text>
+                    <text x="51" style="color:#666666;cursor:default;font-size:14px;font-family:Microsoft yahei;fill:#666666;width:551px;text-overflow:clip;" text-anchor="end" transform="translate(0,0)" y="15" opacity="1">
+                      <tspan>100 %</tspan>
+                    </text>
+                  </g>
+                  <g class="highcharts-tooltip" style="cursor:default;padding:0;pointer-events:none;white-space:nowrap;" transform="translate(0,-9000000000)">
+                    <path fill="none" d="M 4 0 L 12 0 C 16 0 16 0 16 4 L 16 12 C 16 16 16 16 12 16 L 4 16 C 0 16 0 16 0 12 L 0 4 C 0 0 0 0 4 0" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path>
+                    <path fill="none" d="M 4 0 L 12 0 C 16 0 16 0 16 4 L 16 12 C 16 16 16 16 12 16 L 4 16 C 0 16 0 16 0 12 L 0 4 C 0 0 0 0 4 0" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path>
+                    <path fill="none" d="M 4 0 L 12 0 C 16 0 16 0 16 4 L 16 12 C 16 16 16 16 12 16 L 4 16 C 0 16 0 16 0 12 L 0 4 C 0 0 0 0 4 0" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path>
+                    <path fill="rgba(249, 249, 249, .85)" d="M 4 0 L 12 0 C 16 0 16 0 16 4 L 16 12 C 16 16 16 16 12 16 L 4 16 C 0 16 0 16 0 12 L 0 4 C 0 0 0 0 4 0"></path>
+                    <text x="8" style="font-size:12px;color:#666666;fill:#666666;" y="20"></text>
+                  </g>
+                  </svg></div>
+              </div>
+            </div>
+            <div class="history-receive" style="display: none;">
+              <div class="totaldesc"> <span>2017-05-17</span> - <span>2017-05-23</span>,
+                总计短信接收成功率 <span></span>,
+                短信接收失败率 <span></span>,
+                短信接收未知率 <span></span> </div>
+              <!-- 历史图表-->
+              <div class="statistic-diagram" style="height: 500px; position: relative;" id="HistoryData"></div>
+              <div class="block-title-cpt"> 短信到达率 </div>
+              <div class="history-table">
+                <table class="yunmo">
+                  <thead>
+                    <tr>
+                      <th>日期</th>
+                      <th>短信接收成功率</th>
+                      <th>短信接收失败率</th>
+                      <th>短信接收未知率</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+                <div class="pagination-cpt" pre-page="1" next-page="2"> <span class="totalCount">共1条记录</span> </div>
+              </div>
+            </div>
+            
+            <!--导出操作弹窗--> 
+            
+          </div>
+        </div>
+        <div class="tab-body-cpt "> </div>
+        <div class="tab-body-cpt "> </div>
+        <div class="tab-body-cpt ">
+          <div class="link-click-statistic-cpt">
+            <div _v-833fcad8="" class="state-message-cpt "> 发送短信时使用统计短链接，即可查看短信内的链接被点击情况，从而优化短信发送时间、内容、人群等。（数据10分钟更新一次） </div>
+            <table>
+              <tbody>
+                <tr>
+                  <td class="label-grid">账号：</td>
+                  <td><div class="sub-account-select-cpt"> 
+                      <!--非企业号显示--> 
+                      
+                      <!--平铺模式-->
+                      <div class="radio-group-cpt">
+                        <div title="1.系统 55c6**(安迪)" class="rect-radio-cpt undefined checked">
+                          <div class="chosen-sign"></div>
+                          <i class="icon-cpt">  </i> 1.系统 55c6**(安迪) </div>
+                        <div style="clear: both"></div>
+                      </div>
+                      
+                      <!--下拉模式--> 
+                      
+                    </div></td>
+                </tr>
+                <tr>
+                  <td class="label-grid">起止时间：</td>
+                  <td><div class="date-picker">
+                      <input class="text-input-cpt" placeholder="开始时间" onclick="WdatePicker({
+            dateFmt: 'yyyy-MM-dd HH:mm:ss',
+            errDealMode : '0',
+            minDate: '',
+            maxDate: '',
+        })" value="2017-05-21 00:00:00" type="text">
+                    </div>
+                    -
+                    <div class="date-picker">
+                      <input class="text-input-cpt" placeholder="结束时间" onclick="WdatePicker({
+            dateFmt: 'yyyy-MM-dd HH:mm:ss',
+            errDealMode : '0',
+            minDate: '',
+            maxDate: '',
+        })" value="2017-05-24 09:48:16" type="text">
+                    </div></td>
+                </tr>
+                <tr>
+                  <td class="label-grid"></td>
+                  <td><button class="button button-middle   " type="button"> <span class="button-copy"> 查询 </span> </button></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="block-title-cpt"> 短链点击统计 </div>
+            <div class="record-container">
+              <div class="table-cpt ">
+                <div class="thead-cpt ">
+                  <div class="tr-cpt ">
+                    <div class="th-cpt"> 生成时间 </div>
+                    <div class="th-cpt"> 活动名称 </div>
+                    <div class="th-cpt"> 统计链接 </div>
+                    <div class="th-cpt"> 发送短信 </div>
+                    <div class="th-cpt"> 发送时间 </div>
+                    <div class="th-cpt"> 点击量 </div>
+                    <div class="th-cpt"> 点击率 </div>
+                    <div class="th-cpt"> 操作 </div>
+                  </div>
+                </div>
+                <div class="tbody-cpt "> </div>
+              </div>
+              <div class="pagin-cpt"> <span class="totalCount">共0条记录</span> </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-body-cpt "> </div>
+        <div class="tab-body-cpt "> </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

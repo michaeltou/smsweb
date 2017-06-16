@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>短信记录 - 云模管理后台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="baidu-site-verification" content="elXuCAMAW3">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/admin_bootstrap.css">
+<link rel="stylesheet" href="css/admin_reset.css">
+<link rel="stylesheet" href="css/admin_style.css">
+<link rel="stylesheet" href="css/index_style.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/yp_style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/adminindex.js"></script>
+</head>
+
+<body style="background-color: #fff;">
+<div class="mainContainer">
+<div data-page="domesticRecord" class="rightmain clearfix">
+  <div class="app-framework-cpt">
+    <div class="record-manager-cpt">
+      <div class="tab-cpt">
+        <div class="tab-nav-cpt">
+          <div class="tab-nav-btn-cpt ">
+            <div class="tab-nav-btn-body"> <a href="sendrecord.html"><span class="tab-nav-btn-content"> 发送记录 </span></a> </div>
+          </div>
+          <div class="tab-nav-btn-cpt ">
+            <div class="tab-nav-btn-body"><a href="replyrecord.html"> <span class="tab-nav-btn-content"> 用户回复记录 </span> </a></div>
+          </div>
+          <div class="tab-nav-btn-cpt selected">
+            <div class="tab-nav-btn-body"><a href="errorrecord.html"> <span class="tab-nav-btn-content"> 发送异常记录 </span> </a> </div>
+          </div>
+        </div>
+        <div class="tab-body-group-cpt">
+          <div class="tab-body-cpt tab-body-show sendException">
+            <div class="smssendrecord-cpt">
+              <div class="search-div">
+                <div class="search-bar">
+                  <div style="float:left; padding-top:5px; padding-right:10px;"><span style="padding-top:50px;" >起止时间: </span></div>
+                  <div class="date-picker" style="float:left;">
+                    <input class="text-input-cpt" placeholder=""  value="2017-05-19" type="text" name='date1'>
+                  </div>
+                  <div style="float:left;">-</div>
+                  <div class="date-picker" style="float:left;">
+                    <input class="text-input-cpt" placeholder=""  value="2017-05-19" type="text" name='date'>
+                  </div>
+                  <span class="search-time-dec"> ( 可查询三个月内记录 ) </span> </div>
+                </br>
+                <div class="search-bar"> <span class="search-name">手机号: </span>
+                  <div class="input-cpt-wrapper" _v-c09d7846="" style="width: 200px;">
+                    <input class="input-cpt" _v-c09d7846="" placeholder="请输入手机号" name="mobile" type="text">
+                  </div>
+                  <div style="width: 200px; margin-left: 69px;" class="validator-cpt error"> </div>
+                </div>
+                <br>
+                <div class="search-bar searchBtn">
+                  <button class="button button-middle" type="button"> <span class="button-copy"> 查询 </span>
+                  <div class="loading-box fold-transition button-loading-box" style="display: none;"> <img class="loading-icon s-small" src="" alt=""> </div>
+                  </button>
+                </div>
+              </div>
+              <div class="block-title-cpt"> 发送异常记录 </div>
+              <div class="recordList">
+                <table class="yunmo">
+                  <thead>
+                    <tr>
+                      <th style="width:130px;">发送时间</th>
+                      <th>发送账户</th>
+                      <th style="width:150px;">手机号</th>
+                      <th style="width:230px">提交次数（成功次数/失败次数）</th>
+                      <th style="width:200px;">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  		<tr>
+                      	<td>2017-6-2 15:30</td>
+                      	<td>发送账户</td>
+                      	<td>18717947096</td>
+                      	<td >10</td>
+                     	<td ><input type='button' name='delete' value='删除'></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="pagination-cpt" pre-page="1" next-page="1"> <span class="totalCount">共0条记录</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
