@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>云模短信平台</display-name>
+  
   <servlet>
     <servlet-name>RegisterServlet</servlet-name>
     <servlet-class>yunmo.sms.service.RegisterServlet</servlet-class>
@@ -26,9 +27,29 @@
     <servlet-class>yunmo.sms.service.TestMessageServlet</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>DownloadAPIDocServlet</servlet-name>
-    <servlet-class>yunmo.sms.service.DownloadAPIDocServlet</servlet-class>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>yunmo.sms.service.DownloadServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>LoaddataServlet</servlet-name>
+    <servlet-class>yunmo.sms.service.LoaddataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckSensitiveWordServlet</servlet-name>
+    <servlet-class>yunmo.sms.service.CheckSensitiveWordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckSignatureExistServlet</servlet-name>
+    <servlet-class>yunmo.sms.service.CheckSignatureExistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SystemLogoutServlet</servlet-name>
+    <servlet-class>yunmo.sms.service.SystemLogoutServlet</servlet-class>
+  </servlet>
+
+
+
+
 
 
 
@@ -61,8 +82,24 @@
     <url-pattern>/servlet/TestMessageServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>DownloadAPIDocServlet</servlet-name>
-    <url-pattern>/servlet/DownloadAPIDocServlet</url-pattern>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/servlet/DownloadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoaddataServlet</servlet-name>
+    <url-pattern>/servlet/LoaddataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckSensitiveWordServlet</servlet-name>
+    <url-pattern>/servlet/CheckSensitiveWordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckSignatureExistServlet</servlet-name>
+    <url-pattern>/servlet/CheckSignatureExistServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SystemLogoutServlet</servlet-name>
+    <url-pattern>/servlet/SystemLogoutServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

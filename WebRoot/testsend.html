@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>短信验证码测试 - 云模管理后台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="baidu-site-verification" content="elXuCAMAW3">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/admin_bootstrap.css">
+<link rel="stylesheet" href="css/admin_reset.css">
+<link rel="stylesheet" href="css/admin_style.css">
+<link rel="stylesheet" href="css/index_style.css">
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/yp_style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/Validform_v5.3.2.js"></script>
+<script type="text/javascript" src="js/testsend.js"></script>
+</head>
+
+<body style="background-color: #fff;">
+<div class="mainContainer">
+<div data-page="ServiceTest" class="rightmain clearfix">
+  <div class="app-framework-cpt">
+    <div class="service-test-cpt">
+      <div class="tab-cpt">
+        <div class="tab-nav-cpt">
+          <div class="tab-nav-btn-cpt selected">
+            <div class="tab-nav-btn-body"> <a href="testsend.html"><span class="tab-nav-btn-content"> 短信验证码测试 </span></a> </div>
+          </div>
+          <div class="tab-nav-btn-cpt ">
+            <div class="tab-nav-btn-body"> <a href="blankwordtest.html"> <span class="tab-nav-btn-content"> 屏蔽词检查 </span> </a></div>
+          </div>
+        </div>
+        <div class="tab-body-group-cpt">
+          <div class="tab-body-cpt tab-body-show serviceTest">
+            <div class="sms-captcha-service-test-cpt">
+              <form method="post" action="/sms/servlet/SendsmstestServlet" id="regform">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="item-name">签名:</td>
+                      <td class="item-value"><div class="input-cpt-wrapper">
+                          <input class="text-input-cpt" datatype="s2-8" nullmsg="请输入签名!"  errormsg="签名要在2~8位之间！" placeholder="输入签名（2-8位）" name="signature" value="" type="text" >
+                          <div class="Validform_checktip"></div>
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <td class="item-name">手机号:</td>
+                      <td class="item-value"><div class="input-cpt-wrapper">
+                          <input class="text-input-cpt" datatype="m" nullmsg="请输入手机号码！" errormsg="您输入的手机号码格式不正确！"  placeholder="输入手机号" name="phoneNo" value="" type="text"> 
+                          <div class="Validform_checktip"></div>
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <td class="item-name">内容预览:</td>
+                      <td class="item-value"><div class="preview">
+                          <div class="content" id="servicetestcontent"> 【云模网】您的验证码是3946 </div>
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <td class="item-name"></td>
+                      <td class="item-value"><button class="button button-middle" type="button"> <span class="button-copy"> <span> 发送 </span> </span> </button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
