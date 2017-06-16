@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="sms:war exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/sms_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="sms" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="mybatis-3.3.0.jar" module-name="sms" />
+          <element id="library" level="module" name="mysql_connector_java_5.1.36_bin.jar" module-name="sms" />
+          <element id="library" level="module" name="junit4" module-name="sms" />
+        </element>
+      </element>
+      <element id="library" level="module" name="rt.jar" module-name="sms" />
+      <element id="javaee-facet-resources" facet="sms/web/Web" />
+    </root>
+  </artifact>
+</component>
